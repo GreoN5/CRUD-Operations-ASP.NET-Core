@@ -1,0 +1,62 @@
+﻿@model crud_operations.Models.Student
+
+@{ 
+	ViewData["Title"] = "Delete student";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete student</h2>
+
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th>
+					@Html.DisplayNameFor(model => model.FirstName)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.LastName)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Gender)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Year)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Major)
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					@Html.DisplayFor(model => model.FirstName)
+				</td>
+				<td>
+					@Html.DisplayFor(model => model.LastName)
+				</td>
+				<td>
+					@Html.DisplayFor(model => model.Gender)
+				</td>
+				<td>
+					@Html.DisplayFor(model => model.Year)
+				</td>
+				<td>
+					@Html.DisplayFor(model => model.MajorID)
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div>
+	<form action="/Student/DeleteStudent">
+		@Html.HiddenFor(model => model.StudentID)
+		<input type="submit" value="Delete" />
+	</form>
+</div>
+
+<div>
+	<a href="/Students/Index">Go back</a>
+</div>

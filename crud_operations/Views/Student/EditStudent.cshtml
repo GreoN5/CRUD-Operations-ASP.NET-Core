@@ -1,0 +1,42 @@
+﻿@model crud_operations.ViewModels.EditStudentVM
+
+@{ 
+	ViewData["Title"] = "Edit student";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit student</h2>
+
+<div>
+	<form action="/Student/EditStudent" method="post">
+
+		@Html.ValidationSummary(true)
+		@Html.HiddenFor(model => model.StudentID)
+		@Html.HiddenFor(model => model.MajorID)
+
+		<div>
+			@Html.LabelFor(model => model.FirstName)
+			@Html.EditorFor(model => model.FirstName)
+			@Html.ValidationMessageFor(model => model.FirstName)
+		</div>
+		<div>
+			@Html.LabelFor(model => model.LastName)
+			@Html.EditorFor(model => model.LastName)
+			@Html.ValidationMessageFor(model => model.LastName)
+		</div>
+		<div>
+			@Html.LabelFor(model => model.Gender)
+			@Html.EditorFor(model => model.Gender)
+			@Html.ValidationMessageFor(model => model.Gender)
+		</div>
+		<div>
+			@Html.LabelFor(model => model.Year)
+			@Html.EditorFor(model => model.Year)
+			@Html.ValidationMessageFor(model => model.Year)
+		</div>
+		<div>
+			<input type="submit" value="Save" />
+			<a href="/Student/Index">Cancel</a>
+		</div>
+	</form>
+</div>

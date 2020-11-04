@@ -1,0 +1,38 @@
+﻿@using crud_operations.Tools
+@using crud_operations.Models
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="~/css/StyleSheet.css" type="text/css" />
+		<title>@ViewData["Title"] - crud operations</title>
+	</head>
+	<body>
+		<header>
+			<h1>CRUD Operations</h1>
+			<nav>
+				<ul>
+					<li><a href="/Home/Index">Home</a></li>
+					<li><a href="/Student/Index">Students</a></li>
+					<li><a href="/Major/Index">Majors</a></li>
+					<li><a href="/Project/Index">Projects</a></li>
+					<li>
+						@if (this.ViewContext.HttpContext.Session.GetObject<Admin>("admin") == null)
+						{
+							<a href="/Home/Login">Login</a>
+						}
+						else
+						{
+							<a href="/Home/Logout">Logout</a>
+						}
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main role="main">
+			@RenderBody()
+		</main>
+	</body>
+</html>

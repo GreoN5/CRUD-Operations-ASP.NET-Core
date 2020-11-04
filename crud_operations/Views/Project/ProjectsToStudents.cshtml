@@ -1,0 +1,42 @@
+﻿@model IEnumerable<crud_operations.Models.ProjectToStudent>
+
+@{ 
+	ViewData["Title"] = "Projects to students";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Projects to students</h2>
+
+<a href="/Project/CreateNewInstance">Create new instance</a>
+
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th>
+					@Html.DisplayNameFor(model => model.ProjectID)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.StudentID)
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td>
+						@Html.DisplayFor(model => item.ProjectID)
+					</td>
+					<td>
+						@Html.DisplayFor(model => item.StudentID)
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+
+<div>
+	<a href="/Project/Index">Go back</a>
+</div>

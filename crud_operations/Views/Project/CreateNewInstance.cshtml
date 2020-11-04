@@ -1,0 +1,30 @@
+﻿@model crud_operations.Models.ProjectToStudent
+
+@{ 
+	ViewData["Title"] = "Create new instance";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create new instance</h2>
+
+<div>
+	<form action="/Project/CreateNewInstance" method="post">
+		@Html.ValidationSummary(true)
+
+		<div>
+			@Html.LabelFor(model => model.Project)
+			@Html.DropDownList("ProjectID", (SelectList)ViewBag.ProjectID)
+		</div>
+		<div>
+			@Html.LabelFor(model => model.StudentID)
+			@Html.DropDownList("StudentID", (SelectList)ViewBag.StudentID)
+		</div>
+		<div>
+			<input type="submit" value="Create" />
+		</div>
+	</form>
+</div>
+
+<div>
+	<a href="/Project/ProjectsToStudents">Go back</a>
+</div>

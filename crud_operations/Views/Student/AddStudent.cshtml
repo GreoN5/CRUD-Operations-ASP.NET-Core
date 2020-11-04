@@ -1,0 +1,45 @@
+﻿@model crud_operations.Models.Student
+
+@{ 
+	ViewData["Title"] = "Create new student";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create new student</h2>
+
+<div>
+	<form action="/Student/AddStudent" method="post">
+		@Html.ValidationSummary(true)
+		<div>
+			@Html.LabelFor(model => model.FirstName)
+			@Html.TextBoxFor(model => model.FirstName)
+			@Html.ValidationMessageFor(model => model.FirstName)
+		</div>
+		<div>
+			@Html.LabelFor(model => model.LastName)
+			@Html.TextBoxFor(model => model.LastName)
+			@Html.ValidationMessageFor(model => model.LastName)
+		</div>
+		<div>
+			@Html.LabelFor(model => model.Gender)
+			@Html.TextBoxFor(model => model.Gender)
+			@Html.ValidationMessageFor(model => model.Gender)
+		</div>
+		<div>
+			@Html.LabelFor(model => model.Major)
+			@Html.DropDownList("MajorID", (SelectList)ViewBag.MajorID)
+		</div>
+		<div>
+			@Html.LabelFor(model => model.Year)
+			@Html.TextBoxFor(model => model.Year)
+			@Html.ValidationMessageFor(model => model.Year)
+		</div>
+		<div>
+			<input type="submit" value="Create" />
+		</div>
+	</form>
+</div>
+
+<div>
+	<a href="/Student/Index">Go back</a>
+</div>

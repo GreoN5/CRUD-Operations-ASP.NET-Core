@@ -1,0 +1,68 @@
+﻿@model IEnumerable<crud_operations.Models.Student>
+
+@{
+	ViewData["Title"] = "All students";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>All students</h2>
+
+<div>
+	<a href="/Student/AddStudent">Add new student</a>
+</div>
+
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th>
+					@Html.DisplayNameFor(model => model.StudentID)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.FirstName)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.LastName)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Gender)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.Year)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.MajorID)
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td>
+						@Html.DisplayFor(model => item.StudentID)
+					</td>
+					<td>
+						@Html.DisplayFor(model => item.FirstName)
+					</td>
+					<td>
+						@Html.DisplayFor(model => item.LastName)
+					</td>
+					<td>
+						@Html.DisplayFor(model => item.Gender)
+					</td>
+					<td>
+						@Html.DisplayFor(model => item.Year)
+					</td>
+					<td>
+						@Html.DisplayFor(model => item.MajorID)
+					</td>
+					<td>
+						<a href="/Student/EditStudent?Id=@item.StudentID">Edit</a>
+						<a href="/Student/DeleteStudent?Id=@item.StudentID">Delete</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

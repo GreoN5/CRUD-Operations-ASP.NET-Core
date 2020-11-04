@@ -1,0 +1,26 @@
+﻿@model crud_operations.Models.Project
+
+@{ 
+	ViewData["Title"] = "Create new project";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create new project</h2>
+
+<div>
+	<form action="/Project/CreateNewProject" method="post">
+		@Html.ValidationSummary(true)
+
+		<div>
+			@Html.LabelFor(model => model.ProjectName)
+			@Html.TextBoxFor(model => model.ProjectName)
+		</div>
+		<div>
+			<input type="submit" value="Create" />
+		</div>
+	</form>
+</div>
+
+<div>
+	<a href="/Project/Index">Go back</a>
+</div>

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<crud_operations.Models.Major>
+
+@{ 
+	ViewData["Title"] = "Majors";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<a href="/Major/AddMajor">Add new major</a>
+
+<table>
+	<tr>
+		<th>Major ID</th>
+		<th>Major name</th>
+		<th>Degree</th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>@Html.DisplayFor(modelItem => item.MajorID)</td>
+			<td>@Html.ActionLink(item.MajorName, "Students", new { id = item.MajorID })</td>
+			<td>@Html.DisplayFor(modelItem => item.Degree)</td>
+		</tr>
+	}
+</table>
