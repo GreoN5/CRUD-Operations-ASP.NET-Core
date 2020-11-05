@@ -51,38 +51,5 @@ namespace crud_operations.Controllers
 
 			return View(this._students);
 		}
-
-		[HttpGet]
-		public IActionResult AddStudentToMajor()
-		{
-			return View();
-		}
-
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public IActionResult AddStudentToMajor(int? id, Student student)
-		{
-			Major major = id == null ? new Major() :
-				   this._studentContext.Majors.Where(m => m.MajorID == id).FirstOrDefault();
-
-			if (major == null)
-			{
-				return RedirectToAction("Index");
-			}
-			else
-			{
-				student.MajorID = major.MajorID;
-			}
-
-			if (ModelState.IsValid)
-			{
-				this._studentContext.Add(student);
-				this._studentContext.SaveChanges();
-
-				return RedirectToAction("Index", "Major");
-			}
-
-			return View(student);
-		}
 	}
 }

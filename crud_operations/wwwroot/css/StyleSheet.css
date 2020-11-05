@@ -64,13 +64,13 @@ input[type=submit] {
 input[type=submit]:hover {
 }
 
-.form-wrapper-login {
+.form-wrapper {
 	padding: 15px;
 	border: 2px solid silver;
 	text-align: center;
 }
 
-#text-box-login {
+#text-box {
 	padding: 5px;
 	margin-bottom: 10px;
 	font-size: 17px;
@@ -82,7 +82,7 @@ input[type=submit]:hover {
 	transition: 0.5s;
 }
 
-#submit-login {
+#submit {
 	padding: 5px 10px 5px 10px;
 	margin-top: 10px;
 	font-size: 1.1em;
@@ -93,11 +93,11 @@ input[type=submit]:hover {
 	cursor: pointer;
 }
 
-#submit-login:hover {
+#submit:hover {
 	background-color: lightblue;
 }
 
-#text-box-login:focus {
+#text-box:focus {
 	width: 75%;
 	border-color: silver;
 }

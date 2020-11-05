@@ -11,17 +11,15 @@
 	<form method="post" action="/Major/AddMajor">
 		@Html.ValidationSummary(true)
 		<div>
-			@Html.LabelFor(model => model.MajorName)
-			@Html.TextBoxFor(model => model.MajorName, new { @id = "text-box" })
+			@Html.TextBoxFor(model => model.MajorName, new { @id = "text-box", @placeholder = "Major name" })
 			@Html.ValidationMessageFor(model => model.MajorName)
 		</div>
 		<div>
-			@Html.LabelFor(model => model.Degree)
-			@Html.TextBoxFor(model => model.Degree, new { @id = "text-box" })
+			@Html.TextBoxFor(model => model.Degree, new { @id = "text-box", @placeholder = "Degree type" })
 			@Html.ValidationMessageFor(model => model.Degree)
 		</div>
 		<div>
-			<input type="submit" value="Add" />
+			<input id="submit" type="submit" value="Add" />
 		</div>
 	</form>
 </div>

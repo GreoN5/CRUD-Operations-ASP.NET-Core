@@ -8,19 +8,19 @@
 <div>
 	<h1>Login</h1>
 </div>
-<div class="form-wrapper-login">
+<div class="form-wrapper">
 	<form action="/Home/Login" method="post">
 		<div>
-			@Html.TextBoxFor(m => m.Username, new { @placeholder = "Username", @id = "text-box-login" })
+			@Html.TextBoxFor(m => m.Username, new { @placeholder = "Username", @id = "text-box" })
 			@Html.ValidationMessageFor(m => m.Username)
 		</div>
 		<div>
-			@Html.TextBoxFor(m => m.Password, new { @placeholder = "Password", @type = "password", @id = "text-box-login" })
+			@Html.TextBoxFor(m => m.Password, new { @placeholder = "Password", @type = "password", @id = "text-box" })
 			@Html.ValidationMessageFor(m => m.Password)
 		</div>
 		<div>
 			@Html.ValidationMessage("AuthError")
 		</div>
-		<input id="submit-login" type="submit" value="Login" />
+		<input id="submit" type="submit" value="Login" />
 	</form>
 </div>

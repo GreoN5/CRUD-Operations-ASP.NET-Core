@@ -10,16 +10,9 @@
 @if (this.Model.Count() == 0)
 {
 	<p>
-		<strong>You must add at least ONE student from the "Students" section in order to see it!</strong>
+		<strong>There are no students in current major!</strong>
 	</p>
 }
-else
-{
-	foreach (var item in Model)
-	{
-		<a href="/Major/AddStudentToMajor?Id=@item.MajorID">Add student to current major</a>
-		break;
-	}
 
 	<table>
 		<thead>
@@ -68,4 +61,3 @@ else
 			}
 		</tbody>
 	</table>
-}

@@ -9,7 +9,7 @@ using crud_operations.Models;
 namespace crud_operations.Migrations
 {
     [DbContext(typeof(StudentContext))]
-    [Migration("20201104122838_University")]
+    [Migration("20201105170403_University")]
     partial class University
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
