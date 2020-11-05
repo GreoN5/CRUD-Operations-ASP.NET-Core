@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects C#\\crud_operations\\crud_operations\\crud_operations.csproj": {}
+    "D:\\Projects C#\\CRUD_operations\\crud_operations\\crud_operations.csproj": {}
   },
   "projects": {
-    "D:\\Projects C#\\crud_operations\\crud_operations\\crud_operations.csproj": {
+    "D:\\Projects C#\\CRUD_operations\\crud_operations\\crud_operations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects C#\\crud_operations\\crud_operations\\crud_operations.csproj",
+        "projectUniqueName": "D:\\Projects C#\\CRUD_operations\\crud_operations\\crud_operations.csproj",
         "projectName": "crud_operations",
-        "projectPath": "D:\\Projects C#\\crud_operations\\crud_operations\\crud_operations.csproj",
+        "projectPath": "D:\\Projects C#\\CRUD_operations\\crud_operations\\crud_operations.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects C#\\crud_operations\\crud_operations\\obj\\",
+        "outputPath": "D:\\Projects C#\\CRUD_operations\\crud_operations\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

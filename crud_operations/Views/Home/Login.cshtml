@@ -5,22 +5,22 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<body>
-	<div>
-		<h1>Login</h1>
-	</div>
+<div>
+	<h1>Login</h1>
+</div>
+<div class="form-wrapper-login">
 	<form action="/Home/Login" method="post">
 		<div>
-			@Html.TextBoxFor(m => m.Username, new { @placeholder = "Username" })
+			@Html.TextBoxFor(m => m.Username, new { @placeholder = "Username", @id = "text-box-login" })
 			@Html.ValidationMessageFor(m => m.Username)
 		</div>
 		<div>
-			@Html.TextBoxFor(m => m.Password, new { @placeholder = "Password", @type = "password" })
+			@Html.TextBoxFor(m => m.Password, new { @placeholder = "Password", @type = "password", @id = "text-box-login" })
 			@Html.ValidationMessageFor(m => m.Password)
 		</div>
 		<div>
 			@Html.ValidationMessage("AuthError")
 		</div>
-		<input type="submit" value="Login" />
+		<input id="submit-login" type="submit" value="Login" />
 	</form>
-</body>
+</div>

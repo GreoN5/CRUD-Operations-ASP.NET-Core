@@ -7,17 +7,17 @@
 
 <h2>Add new major</h2>
 
-<div>
+<div class="form-wrapper">
 	<form method="post" action="/Major/AddMajor">
 		@Html.ValidationSummary(true)
 		<div>
 			@Html.LabelFor(model => model.MajorName)
-			@Html.TextBoxFor(model => model.MajorName)
+			@Html.TextBoxFor(model => model.MajorName, new { @id = "text-box" })
 			@Html.ValidationMessageFor(model => model.MajorName)
 		</div>
 		<div>
 			@Html.LabelFor(model => model.Degree)
-			@Html.TextBoxFor(model => model.Degree)
+			@Html.TextBoxFor(model => model.Degree, new { @id = "text-box" })
 			@Html.ValidationMessageFor(model => model.Degree)
 		</div>
 		<div>

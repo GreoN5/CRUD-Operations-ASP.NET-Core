@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "StDsUq60ly35cZVqCmYkQu6FINoWVPyDPR/0aH+I0wBs0pS+D37dBAFppujHD4EBd8tFD45rr59QfEJDc7G0Aw==",
+  "dgSpecHash": "05T87iPwIVLAvVhIPA/bYKk4kbLAdPrBfio44ea0EpQhfBuJqLm2K5JlQwyz2L+jfBV+5+H2q4sc0kGkH6XVCA==",
   "success": true,
-  "projectFilePath": "D:\\Projects C#\\crud_operations\\crud_operations\\crud_operations.csproj",
+  "projectFilePath": "D:\\Projects C#\\CRUD_operations\\crud_operations\\crud_operations.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
