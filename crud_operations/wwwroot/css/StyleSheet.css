@@ -57,32 +57,31 @@ main {
 	align-items: center;
 }
 
-input[type=submit] {
-	
-}
-
-input[type=submit]:hover {
-}
-
-.form-wrapper {
-	padding: 15px;
-	border: 2px solid silver;
+table {
+	width: 70%;
+	border: 3px solid silver;
+	margin: 10px;
 	text-align: center;
+	border-collapse: collapse;
+	font-size: 18px;
 }
 
-#text-box {
+thead {
+	border-bottom: 3px solid silver;
+}
+
+th { 
+	border-right: 1px solid silver;
+	padding: 12px;
+}
+
+td {
+	border-right: 1px solid silver;
+	border-bottom: 1px solid silver;
 	padding: 5px;
-	margin-bottom: 10px;
-	font-size: 17px;
-	font-weight: 700;
-	border: 2px solid black;
-	border-radius: 20px;
-	text-align: center;
-	width: 55%;
-	transition: 0.5s;
 }
 
-#submit {
+input[type=submit] {
 	padding: 5px 10px 5px 10px;
 	margin-top: 10px;
 	font-size: 1.1em;
@@ -93,11 +92,67 @@ input[type=submit]:hover {
 	cursor: pointer;
 }
 
-#submit:hover {
+input[type=submit]:hover {
 	background-color: lightblue;
+}
+
+select {
+	padding: 5px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-weight: 700;
+	border: 2px solid black;
+	border-radius: 20px;
+	text-align: center;
+	width: 60%;
+}
+
+.form-wrapper {
+	padding: 15px;
+	border: 2px solid silver;
+	text-align: center;
+}
+
+.link-wrapper {
+	align-self: flex-end;
+	margin-right: 15%;
+	padding-top: 10px;
+}
+
+#text-box {
+	padding: 5px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-weight: 700;
+	border: 2px solid black;
+	border-radius: 20px;
+	text-align: center;
+	width: 55%;
+	transition: 0.5s;
 }
 
 #text-box:focus {
 	width: 75%;
 	border-color: silver;
+}
+
+#link {
+	text-decoration: none;
+}
+
+#button {
+	text-decoration: none;
+	padding: 5px;
+	border: 2px solid black;
+	background-color: #DCDCDC;
+	font-size: 17px;
+	font-weight: 800;
+	color: black;
+	transition: 0.5s;
+	margin-left: 6px;
+}
+
+#button:hover {
+	background-color: lightcyan;
+	color: red;
 }

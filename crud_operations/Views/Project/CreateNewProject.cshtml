@@ -7,13 +7,12 @@
 
 <h2>Create new project</h2>
 
-<div>
+<div class="form-wrapper">
 	<form action="/Project/CreateNewProject" method="post">
 		@Html.ValidationSummary(true)
 
 		<div>
-			@Html.LabelFor(model => model.ProjectName)
-			@Html.TextBoxFor(model => model.ProjectName)
+			@Html.TextBoxFor(model => model.ProjectName, new { @placeholder = "Project name", @id = "text-box"})
 		</div>
 		<div>
 			<input type="submit" value="Create" />

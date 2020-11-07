@@ -7,31 +7,26 @@
 
 <h2>Create new student</h2>
 
-<div>
+<div class="form-wrapper">
 	<form action="/Student/AddStudent" method="post">
 		@Html.ValidationSummary(true)
 		<div>
-			@Html.LabelFor(model => model.FirstName)
-			@Html.TextBoxFor(model => model.FirstName)
+			@Html.TextBoxFor(model => model.FirstName, new { @placeholder = "First name", @id = "text-box" })
 			@Html.ValidationMessageFor(model => model.FirstName)
 		</div>
 		<div>
-			@Html.LabelFor(model => model.LastName)
-			@Html.TextBoxFor(model => model.LastName)
+			@Html.TextBoxFor(model => model.LastName, new { @placeholder = "Last name", @id = "text-box" })
 			@Html.ValidationMessageFor(model => model.LastName)
 		</div>
 		<div>
-			@Html.LabelFor(model => model.Gender)
-			@Html.TextBoxFor(model => model.Gender)
+			@Html.TextBoxFor(model => model.Gender, new { @placeholder = "Gender", @id = "text-box" })
 			@Html.ValidationMessageFor(model => model.Gender)
 		</div>
 		<div>
-			@Html.LabelFor(model => model.Major)
-			@Html.DropDownList("MajorID", (SelectList)ViewBag.MajorID)
+			@Html.DropDownList("MajorID", (SelectList)ViewBag.MajorID, "Select major")
 		</div>
 		<div>
-			@Html.LabelFor(model => model.Year)
-			@Html.TextBoxFor(model => model.Year)
+			@Html.TextBoxFor(model => model.Year, new { @placeholder = "Year", @id = "text-box" })
 			@Html.ValidationMessageFor(model => model.Year)
 		</div>
 		<div>

@@ -7,33 +7,33 @@
 
 <h2>Projects</h2>
 
-<a href="/Project/CreateNewProject">Create new project</a>
-<a href="/Project/ProjectsToStudents">Projects to students</a>
-
-<div>
-	<table>
-		<thead>
+<table>
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.ProjectID)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.ProjectName)
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
 			<tr>
-				<th>
-					@Html.DisplayNameFor(model => model.ProjectID)
-				</th>
-				<th>
-					@Html.DisplayNameFor(model => model.ProjectName)
-				</th>
+				<td>
+					@Html.DisplayFor(model => item.ProjectID)
+				</td>
+				<td>
+					@Html.DisplayFor(model => item.ProjectName)
+				</td>
 			</tr>
-		</thead>
-		<tbody>
-			@foreach (var item in Model)
-			{
-				<tr>
-					<td>
-						@Html.DisplayFor(model => item.ProjectID)
-					</td>
-					<td>
-						@Html.DisplayFor(model => item.ProjectName)
-					</td>
-				</tr>
-			}
-		</tbody>
-	</table>
+		}
+	</tbody>
+</table>
+
+<div class="link-wrapper">
+	<a id="button" href="/Project/ProjectsToStudents">Projects to students</a>
+	<a id="button" href="/Project/CreateNewProject">Create new project</a>
 </div>

@@ -146,7 +146,6 @@ D:\Projects C#\crud_operations\crud_operations\bin\Debug\netcoreapp3.1\zh-Hant\M
 D:\Projects C#\crud_operations\crud_operations\obj\Debug\netcoreapp3.1\crud_operations.csproj.CoreCompileInputs.cache
 D:\Projects C#\crud_operations\crud_operations\obj\Debug\netcoreapp3.1\crud_operations.MvcApplicationPartsAssemblyInfo.cache
 D:\Projects C#\CRUD_operations\crud_operations\obj\Debug\netcoreapp3.1\Razor\Views\Major\AddMajor.cshtml.g.cs
-D:\Projects C#\CRUD_operations\crud_operations\obj\Debug\netcoreapp3.1\Razor\Views\Major\AddStudentToMajor.cshtml.g.cs
 D:\Projects C#\CRUD_operations\crud_operations\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 D:\Projects C#\CRUD_operations\crud_operations\obj\Debug\netcoreapp3.1\Razor\Views\Student\AddStudent.cshtml.g.cs
 D:\Projects C#\CRUD_operations\crud_operations\obj\Debug\netcoreapp3.1\Razor\Views\Student\Index.cshtml.g.cs

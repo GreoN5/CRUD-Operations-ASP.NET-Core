@@ -9,33 +9,32 @@
 
 <a href="/Project/CreateNewInstance">Create new instance</a>
 
-<div>
-	<table>
-		<thead>
+
+<table>
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.ProjectID)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.StudentID)
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
 			<tr>
-				<th>
-					@Html.DisplayNameFor(model => model.ProjectID)
-				</th>
-				<th>
-					@Html.DisplayNameFor(model => model.StudentID)
-				</th>
+				<td>
+					@Html.DisplayFor(model => item.ProjectID)
+				</td>
+				<td>
+					@Html.DisplayFor(model => item.StudentID)
+				</td>
 			</tr>
-		</thead>
-		<tbody>
-			@foreach (var item in Model)
-			{
-				<tr>
-					<td>
-						@Html.DisplayFor(model => item.ProjectID)
-					</td>
-					<td>
-						@Html.DisplayFor(model => item.StudentID)
-					</td>
-				</tr>
-			}
-		</tbody>
-	</table>
-</div>
+		}
+	</tbody>
+</table>
 
 <div>
 	<a href="/Project/Index">Go back</a>

@@ -7,21 +7,26 @@
 
 <h2>Majors</h2>
 
-<a href="/Major/AddMajor">Add new major</a>
-
 <table>
-	<tr>
-		<th>Major ID</th>
-		<th>Major name</th>
-		<th>Degree</th>
-	</tr>
-
-	@foreach (var item in Model)
-	{
+	<thead>
 		<tr>
-			<td>@Html.DisplayFor(modelItem => item.MajorID)</td>
-			<td>@Html.ActionLink(item.MajorName, "Students", new { id = item.MajorID })</td>
-			<td>@Html.DisplayFor(modelItem => item.Degree)</td>
+			<th>Major ID</th>
+			<th>Major name</th>
+			<th>Degree</th>
 		</tr>
-	}
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@Html.DisplayFor(modelItem => item.MajorID)</td>
+				<td>@Html.ActionLink(item.MajorName, "Students", new { id = item.MajorID }, new { @id = "link" })</td>
+				<td>@Html.DisplayFor(modelItem => item.Degree)</td>
+			</tr>
+		}
+	</tbody>
 </table>
+
+<div class="link-wrapper">
+	<a id="button" href="/Major/AddMajor">Add new major</a>
+</div>
