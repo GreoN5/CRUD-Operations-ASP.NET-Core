@@ -7,17 +7,15 @@
 
 <h2>Create new instance</h2>
 
-<div>
+<div class="form-wrapper">
 	<form action="/Project/CreateNewInstance" method="post">
 		@Html.ValidationSummary(true)
 
 		<div>
-			@Html.LabelFor(model => model.Project)
-			@Html.DropDownList("ProjectID", (SelectList)ViewBag.ProjectID)
+			@Html.DropDownList("ProjectID", (SelectList)ViewBag.ProjectID, "Select project", new { @id = "dropdown"} )
 		</div>
 		<div>
-			@Html.LabelFor(model => model.StudentID)
-			@Html.DropDownList("StudentID", (SelectList)ViewBag.StudentID)
+			@Html.DropDownList("StudentID", (SelectList)ViewBag.StudentID, "Select student", new { @id = "dropdown" })
 		</div>
 		<div>
 			<input type="submit" value="Create" />
@@ -25,6 +23,6 @@
 	</form>
 </div>
 
-<div>
-	<a href="/Project/ProjectsToStudents">Go back</a>
+<div class="link-wrapper">
+	<a id="button" href="/Project/ProjectsToStudents">Go back</a>
 </div>

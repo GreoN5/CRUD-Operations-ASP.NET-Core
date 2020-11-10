@@ -156,3 +156,7 @@ select {
 	background-color: lightcyan;
 	color: red;
 }
+
+#dropdown {
+	width: 90%;
+}

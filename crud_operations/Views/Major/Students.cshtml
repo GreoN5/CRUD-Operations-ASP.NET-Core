@@ -14,50 +14,58 @@
 	</p>
 }
 
-	<table>
-		<thead>
+<table>
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.FirstName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.LastName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Gender)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Year)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.MajorID)
+			</th>
+			<th>Edit student</th>
+			<th>Delete student</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
 			<tr>
-				<th>
-					@Html.DisplayNameFor(model => model.FirstName)
-				</th>
-				<th>
-					@Html.DisplayNameFor(model => model.LastName)
-				</th>
-				<th>
-					@Html.DisplayNameFor(model => model.Gender)
-				</th>
-				<th>
-					@Html.DisplayNameFor(model => model.Year)
-				</th>
-				<th>
-					@Html.DisplayNameFor(model => model.MajorID)
-				</th>
+				<td>
+					@Html.DisplayFor(model => item.FirstName)
+				</td>
+				<td>
+					@Html.DisplayFor(model => item.LastName)
+				</td>
+				<td>
+					@Html.DisplayFor(model => item.Gender)
+				</td>
+				<td>
+					@Html.DisplayFor(model => item.Year)
+				</td>
+				<td>
+					@Html.DisplayFor(model => item.MajorID)
+				</td>
+				<td>
+					<a href="/Student/EditStudent?Id=@item.StudentID">Edit</a>
+				</td>
+				<td>
+					<a href="/Student/DeleteStudent?Id=@item.StudentID">Delete</a>
+				</td>
 			</tr>
-		</thead>
-		<tbody>
-			@foreach (var item in Model)
-			{
-				<tr>
-					<td>
-						@Html.DisplayFor(model => item.FirstName)
-					</td>
-					<td>
-						@Html.DisplayFor(model => item.LastName)
-					</td>
-					<td>
-						@Html.DisplayFor(model => item.Gender)
-					</td>
-					<td>
-						@Html.DisplayFor(model => item.Year)
-					</td>
-					<td>
-						@Html.DisplayFor(model => item.MajorID)
-					</td>
-					<td>
-						<a href="/Student/EditStudent?Id=@item.StudentID">Edit</a>
-						<a href="/Student/DeleteStudent?Id=@item.StudentID">Delete</a>
-					</td>
-				</tr>
-			}
-		</tbody>
-	</table>
+		}
+	</tbody>
+</table>
+
+<div class="link-wrapper">
+	<a id="button" href="/Major/Index">Go back</a>
+</div>
