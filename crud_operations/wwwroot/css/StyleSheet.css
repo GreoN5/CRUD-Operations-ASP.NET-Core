@@ -138,6 +138,7 @@ select {
 
 #link {
 	text-decoration: none;
+	color: blue;
 }
 
 #button {
@@ -154,6 +155,10 @@ select {
 
 #button:hover {
 	background-color: lightcyan;
+	color: red;
+}
+
+#link:hover {
 	color: red;
 }
 
