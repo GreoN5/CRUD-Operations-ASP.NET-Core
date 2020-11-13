@@ -1,6 +1,5 @@
 D:\Projects C#\crud_operations\crud_operations\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Projects C#\crud_operations\crud_operations\bin\Debug\netcoreapp3.1\appsettings.json
-D:\Projects C#\crud_operations\crud_operations\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\Projects C#\crud_operations\crud_operations\bin\Debug\netcoreapp3.1\crud_operations.exe
 D:\Projects C#\crud_operations\crud_operations\bin\Debug\netcoreapp3.1\crud_operations.deps.json
 D:\Projects C#\crud_operations\crud_operations\bin\Debug\netcoreapp3.1\crud_operations.runtimeconfig.json
@@ -155,3 +154,4 @@ D:\Projects C#\CRUD_operations\crud_operations\obj\Debug\netcoreapp3.1\Razor\Vie
 D:\Projects C#\crud_operations\crud_operations\obj\Debug\netcoreapp3.1\Razor\Views\Project\CreateNewInstance.cshtml.g.cs
 D:\Projects C#\crud_operations\crud_operations\obj\Debug\netcoreapp3.1\Razor\Views\Project\CreateNewProject.cshtml.g.cs
 D:\Projects C#\crud_operations\crud_operations\obj\Debug\netcoreapp3.1\Razor\Views\Project\ProjectsToStudents.cshtml.g.cs
+D:\Projects C#\crud_operations\crud_operations\obj\Debug\netcoreapp3.1\scopedcss\bundle\crud_operations.styles.css
